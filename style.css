@@ -1,0 +1,560 @@
+body {
+    font-family: 'Verdana', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1a20;
+    overflow-x: hidden !important;
+    max-width: 100%;
+}
+
+
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(90deg, black, rgb(11, 11, 20));
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.main-logo img,
+.main-logo h2 {
+    float: left;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    height: 30px;
+    width: 10px;
+}
+
+.wallet-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #947308;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.coinmarquee-container {
+    margin-top: 60px; /* Adjust the top margin to avoid overlapping with the hero section */
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.wallet-icon-container:hover {
+  background-color: rgb(184, 159, 21);
+}
+
+.wallet-icon svg {
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    fill: rgb(160, 138, 15); /* Set the initial fill color */
+    transition: fill 0.3s ease; /* Add a smooth transition effect */
+    align-items: center;
+}
+
+.wallet-icon:hover svg {
+    fill: rgb(141, 139, 13); /* Set the hover fill color */
+}
+.hero {
+    padding: 80px 80px; /* Adjust the top padding to create space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background: url('asset/images/icon/dex.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-title {
+    text-align: center;
+    font-weight: bold;
+    padding: 80px 80px; /* Adjust the top padding to create space */
+    color: #fff;
+    
+}
+
+.hero-title h1 {
+    font-size: 40px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #fff; /* Correct the color code */
+}
+
+mark {
+    background-color: rgb(255, 174, 0) ! important;
+    color: white !important;
+    border-radius: 5px !important;
+    padding: 3px;
+}
+
+.container {
+    background-color: #c0c2c4;
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 50px;
+}
+
+.black {
+    padding: 50px;
+    margin-top: 10px;
+}
+.card {
+    background-color: #ebf6ff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 40px; /* Adjust the size of the upload icon */
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #495057;
+}
+
+.card button {
+    background-color: black;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: darkblue;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    background-color: #090520;
+    color:#ced4da;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 2em;
+    color: #abcef1;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close {
+    font-size: 1.5em;
+    color: rgb(3, 2, 0);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: red;
+}
+
+.modal-text {
+    margin-top: 0;
+    color: #b3cde7;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+
+/* Styling for the select box */
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(219, 231, 250);
+  font-size: 16px;
+  color: blueviolet;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="purple" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z" /></svg>');
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+}
+
+/* Hide the default arrow */
+.form-group select::-ms-expand {
+  display: none;
+}
+textarea,
+input[type=password],
+input {
+    width: 100%;
+    background-color: #e1edf8;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.input-group-btn {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: rgb(20, 119, 20);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: darkblue;
+}
+/* Connect button onClick color change */
+.connecting {
+    background-color: #4CAF50 !important;/* Green */
+    transition: background-color 0.3s ease;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .hero-title {
+        padding: 20px;
+    }
+
+    .card {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/*Button Services grid*/
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic columns */
+    gap: 10px; /* Spacing between buttons */
+    margin-bottom: 15px; /* Space below the container */
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: transparent; /* Primary color */
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    border: 2px solid rgb(7, 122, 51);
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #7e6c09; /* Darker hover color */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-out;
+}
+
+.button-icon {
+    margin-right: 8px; /* Space between icon and text */
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Grid Layout for button services */
+@media screen and (max-width: 768px) {
+    .button-container {
+        grid-template-columns: repeat(2, 1fr); /* Two buttons per row for mobile/tablets */
+    }
+}
+
+/*Services to do section*/
+.services-section {
+    padding: 40px 20px;
+    border-radius: 15px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service-card {
+    background: #ecf9fd;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-icon {
+    margin-bottom: 10px;
+  }
+  
+  .service-icon:hover {
+    transform: rotate(180deg);
+    transition: transform 0.8s ease;
+  }
+  .service-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .service-content {
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  /*wallet title*/
+
+  .wallet-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wallet-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #050222;
+}
+
+.heading-line {
+    width: 70%;
+    height: 4px;
+    margin: 0 auto;
+    background-color: #d8a910; /* Adjust the color as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+.heading-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 100%;
+    height: 100%;
+    background-color: #228105; /* Adjusts the animation color */
+    animation: slide-in 1.2s infinite ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/*wallets list*/
+#wallets_list {
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+.wallets-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.wallet-card {
+    background: #d9ecfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    width: 50%; /* 2 items per row on mobile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.wallet-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.wallet-avatar img:hover {
+    transform: rotateX(360deg);
+    transition: transform 0.7s ease;
+}
+
+.wallet-info h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.wallet-info .wallet-site {
+    font-size: 0.65rem;
+    color: #666;
+}
+
+@media (max-width: 767px) {
+    .wallet-card {
+        width: calc(50% - 10px); /* 2 items per row on small screens */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .wallet-card {
+        width: 45%; /*2 item per row on extra small screens */
+        text-align: center;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .wallet-card {
+        width: calc(25% - 20px); /* 4 items per row on larger screens */
+    }
+}
+
+/*Contact us*/
+#contact-us {
+    background-color: #d7e8f7;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#contact-us p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 10px;
+    color: #fff;
+    background-color: #000305;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #353535;
+}
+
+/* Styling for the footer credit section */
+.credit {
+    background-color: #333;
+    color: gray;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.credit p {
+    font-size: 12px;
+}
