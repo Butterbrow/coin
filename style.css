@@ -71,7 +71,7 @@ body {
     fill: rgb(141, 139, 13); /* Set the hover fill color */
 }
 .hero {
-    padding: 80px 20px; /* Adjust the top padding to create space */
+    padding: 80px 10px; /* Adjust the top padding to create space */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     background: url('asset/images/icon/dex.png') no-repeat center center;
     background-size: cover;
@@ -80,7 +80,7 @@ body {
 .hero-title {
     text-align: center;
     font-weight: bold;
-    padding: 80px 20px; /* Adjust the top padding to create space */
+    padding: 80px 10px; /* Adjust the top padding to create space */
     color: #fff;
     
 }
@@ -106,7 +106,7 @@ mark {
     border: none;
     border-radius: 15px;
     margin: 10px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .black {
