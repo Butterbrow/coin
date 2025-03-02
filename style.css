@@ -185,6 +185,7 @@ mark {
 }
 
 .close {
+    margin-top: 10px;
     font-size: 1.5em;
     color: rgb(3, 2, 0);
     cursor: pointer;
