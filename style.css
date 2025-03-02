@@ -102,7 +102,7 @@ mark {
 }
 
 .container {
-    background-color: #teal;
+    background-color: silver;
     border: none;
     border-radius: 15px;
     margin: 10px;
@@ -341,7 +341,7 @@ input {
   }
   
   .service-card {
-    background: lightpink;
+    background: beige;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     padding: 20px;
@@ -437,10 +437,10 @@ input {
 }
 
 .wallet-card {
-    background: gold;
+    background: goldenroad;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     width: 50%; /* 2 items per row on mobile */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -479,7 +479,7 @@ input {
 
 @media (max-width: 767px) {
     .wallet-card {
-        width: calc(50% - 10px); /* 2 items per row on small screens */
+        width: calc(50% - 5px); /* 2 items per row on small screens */
         text-align: center;
     }
 }
@@ -500,7 +500,7 @@ input {
 
 /*Contact us*/
 #contact-us {
-    background-color: grey;
+    background-color: gray;
     padding: 50px 20px;
     text-align: center;
 }
