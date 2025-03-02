@@ -1,3 +1,4 @@
+//codeHorror Mkraft
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
 });
