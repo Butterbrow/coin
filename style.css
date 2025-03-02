@@ -223,6 +223,8 @@ mark {
 }
 label {
     margin-top: 5px;
+    text-align: left;
+    color: beige;
 }
 /* Hide the default arrow */
 .form-group select::-ms-expand {
