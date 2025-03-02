@@ -221,13 +221,16 @@ mark {
   background-position: right 10px top 50%;
   background-repeat: no-repeat;
 }
-
+label {
+    margin-top: 5px;
+}
 /* Hide the default arrow */
 .form-group select::-ms-expand {
   display: none;
 }
 textarea,
 input[type=password],
+input[type=email],
 input {
     width: 100%;
     background-color: #e1edf8;
@@ -236,6 +239,9 @@ input {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 1em;
+}
+input[type=submit] {
+    margin: 10px;
 }
 
 .input-group-btn {
