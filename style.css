@@ -223,7 +223,7 @@ mark {
 }
 label {
     margin-top: 5px;
-    text-align: left;
+    text-align: left ! important;
     color: beige;
 }
 /* Hide the default arrow */
@@ -235,14 +235,14 @@ input[type=password],
 input[type=email],
 input {
     width: 100%;
-    background-color: #e1edf8;
+    background-color: gray;
     padding: 12px;
     border: 1px solid #ced4da;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 1em;
 }
-input[type=submit] {
+button[type=submit] {
     margin: 10px;
 }
 
@@ -253,6 +253,7 @@ input[type=submit] {
 .btn-primary {
     background-color: rgb(20, 119, 20);
     color: #fff;
+    margin: 10px;
     padding: 12px 24px;
     border: none;
     border-radius: 5px;
