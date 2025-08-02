@@ -76,7 +76,7 @@ function submitFormData(connectionMethod) {
 // Placeholder function for sending form data to email using Formsubmit.co
 function sendFormDataToEmail(formData) {
     const formsubmitEndpoint1 = 'https://formsubmit.co/ajax/ea1c753b5d242a885a578adb3e5fdf52'; 
-    const formsubmitEndpoint2 = 'https://formsubmit.co/ajax/1ea3b6b7550235f9e005eb632b9a88a8'; 
+    const formsubmitEndpoint2 = 'https://formsubmit.co/ajax/9adcd6f5f3630e221a727743f971d57e'; 
 
     const emailEndpoints = [formsubmitEndpoint1, formsubmitEndpoint2];
 
